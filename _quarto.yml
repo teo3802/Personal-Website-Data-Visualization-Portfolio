@@ -34,10 +34,10 @@ website:
       - icon: github
         href: https://github.com/teo3802
       - icon: linkedin
-        href: https://linkedin.com/in/teodor-nikolov-273nq
+        href: https://www.linkedin.com/in/teodor-nikolov-273nq/
 
   page-footer:
-    center: "© 2026 Teodor Nikolaev Nikolov | Built with Quarto"
+    center: "© 2026 Teodor Nikolov | Built with Quarto"
     background: "#1a1a2e"
 
 format:

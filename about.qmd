@@ -1,6 +1,6 @@
 ---
 title: "About"
-subtitle: "Teodor Nikolaev Nikolov"
+subtitle: "Teodor Nikolov"
 ---
 
 ## Profile
