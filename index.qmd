@@ -8,6 +8,7 @@ title: "Data Visualization Portfolio"
 **Data Visualization & Quantitative Analysis Portfolio**
 
 Showcasing expertise in statistical analysis, interactive dashboards, and data storytelling using R, Shiny, and modern visualization tools.
+The visualizations and dashboards presented here highlight skills in transforming complex datasets into clear, insightful graphics for economic and social research, which were created within the framework of my courses in the MSc in Economics degree programat the Vienna University of Economics and Business (WU).
 :::
 
 ## Featured Skills {.section-header}
@@ -177,6 +178,6 @@ Flexdashboard comparing educational attainment levels between native-born and fo
 
 Interested in collaborating or discussing opportunities?
 
-[📧 Email Me](mailto:your.email@example.com){.cta-button}
+[📧 Email Me](mailto:teonikolov38@gmail.com){.cta-button}
 [💼 LinkedIn](https://linkedin.com/in/teodor-nikolov-273nq){.cta-button .secondary}
 [🐙 GitHub](https://github.com/teo3802){.cta-button .secondary}

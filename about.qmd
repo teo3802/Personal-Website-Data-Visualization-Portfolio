@@ -68,15 +68,21 @@ Data processing and automation
 
 ## Education
 
-*[Add your educational background here]*
+
+- **MSc Economics** - Vienna University of Economics and Business (WU) 
+(October 2024 - **Expected Graduation**: July 2026)
+    - Relevant coursework: Data Science and Machine Learning, Labour and Organizational Economics, Economic Development, Geoeconomics
+
+- **BSc Business and Economics (BBE)** - Vienna University of Economics and Business (WU) (October 2021 - September 2024)
+  - Bachelor Thesis: Converging to Convergence: A panel data analysis of regional growth determinants of Central and Eastern European EU Member States - Grade: 1
+
 
 ## Professional Experience
 
-*[Add your work experience here]*
 
-## Publications & Projects
+- **Research Assistant** - Institute for Economic and Social History, WU Vienna (March 2025 - June 2026)
+- **Research Assistant** - The Vienna Institute for Internatinal Economic Studies (September 2022-December 2022)
 
-*[Add relevant publications or projects]*
 
 ## Contact
 
@@ -85,7 +91,7 @@ I'm always interested in discussing new opportunities, collaborations, or just c
 ::: {.grid}
 ::: {.g-col-4}
 ### 📧 Email
-[teodor.nikolov@s.wu.ac.at](mailto:teodor.nikolov@s.wu.ac.at)
+[teonikolov38@gmail.com](mailto:teonikolov38@gmail.com)
 :::
 
 ::: {.g-col-4}
