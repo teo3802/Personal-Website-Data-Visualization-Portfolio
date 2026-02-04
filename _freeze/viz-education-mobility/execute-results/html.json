@@ -1,0 +1,15 @@
+{
+  "hash": "87f996147b6e33c1e5fa268b70cc0f96",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Intergenerational Education Mobility\"\nsubtitle: \"Educational attainment transitions between generations in Austria\"\n---\n\n## Overview\n\nThis visualization explores intergenerational educational mobility in Austria, examining how educational attainment levels transmit across generations. The analysis reveals patterns of upward mobility, persistence, and barriers in educational achievement.\n\n## Visualization\n\n::: {.viz-container}\n![Intergenerational Education Mobility in Austria](images/Pic3.png){fig-alt=\"Sankey or transition diagram showing educational attainment mobility between parent and child generations in Austria\"}\n:::\n\n## Methodology\n\n### Data Sources\n- **OECD Education at a Glance** - International education statistics\n- **Statistik Austria** - National education surveys\n- **EU-LFS (Labour Force Survey)** - Educational background data\n\n### Technical Approach\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"show\"}\n# Key packages used\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(ggalluvial)  # for Sankey/alluvial diagrams\n\n# Transition matrix calculation\n# Parent education → Child education flows\n# Mobility index computation\n\n# Visualization approaches:\n# - Alluvial/Sankey diagrams for flows\n# - Heatmaps for transition probabilities\n# - Slope charts for generational comparison\n```\n:::\n\n\n### Key Features\n- **Flow visualization** showing educational transitions\n- **Quantified mobility** metrics\n- **Generational comparison** framework\n\n## Interpretation\n\nThe visualization reveals:\n\n- **Persistence patterns** - Where educational attainment tends to be inherited\n- **Upward mobility corridors** - Paths of educational advancement\n- **Structural barriers** - Bottlenecks in educational progression\n\n## Skills Demonstrated\n\n| Skill | Application |\n|-------|-------------|\n| Transition analysis | Mobility matrices |\n| Flow visualization | Alluvial diagrams |\n| Social statistics | Intergenerational metrics |\n| Policy relevance | Educational equity analysis |\n\n---\n\n[← Previous: Income Dynamics](viz-income-dynamics.qmd){.cta-button .secondary}\n[Next: Spatial Inequality →](viz-spatial-inequality.qmd){.cta-button}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

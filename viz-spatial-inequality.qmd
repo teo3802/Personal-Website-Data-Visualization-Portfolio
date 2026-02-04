@@ -1,0 +1,75 @@
+---
+title: "Spatial Inequality in Central and Eastern Europe"
+subtitle: "Geospatial analysis of regional disparities"
+---
+
+## Overview
+
+This visualization presents a geospatial analysis of regional inequalities across Central and Eastern European (CEE) countries. The map reveals spatial patterns of economic development, highlighting urban-rural divides and cross-border disparities.
+
+## Visualization
+
+::: {.viz-container}
+![Spatial Inequality in Central and Eastern Europe](images/Pic4.png){fig-alt="Choropleth map showing spatial distribution of inequality indicators across Central and Eastern European regions"}
+:::
+
+## Methodology
+
+### Data Sources
+- **Eurostat Regional Statistics** - NUTS-2/NUTS-3 level data
+- **GISCO (Geographic Information System of the Commission)** - Spatial boundaries
+- **National statistical offices** - Supplementary regional data
+
+### Technical Approach
+
+```{r}
+#| eval: false
+#| code-fold: show
+
+# Key packages used
+library(tidyverse)
+library(sf)           # Simple features for spatial data
+library(giscoR)       # Eurostat geographic data
+library(ggplot2)
+
+# Spatial data handling
+# cee_regions <- gisco_get_nuts(
+#   year = "2021",
+#   resolution = "10",
+#   nuts_level = "2"
+# )
+
+# Choropleth mapping
+# Regional inequality indices
+# Cross-border pattern analysis
+```
+
+### Key Features
+- **High-resolution regional mapping** at NUTS-2/NUTS-3 level
+- **Comparative cross-country analysis** within CEE
+- **Urban-rural gradient visualization**
+
+## Spatial Patterns Revealed
+
+The analysis highlights several key patterns:
+
+| Pattern | Description |
+|---------|-------------|
+| **Capital city effect** | Concentration of prosperity around capitals |
+| **East-West gradient** | Persistent disparities within countries |
+| **Border effects** | Economic differences at national boundaries |
+| **Industrial legacy** | Impact of historical industrial centers |
+
+## Geospatial Skills Demonstrated
+
+| Skill | Application |
+|-------|-------------|
+| Spatial data handling | sf package for geometries |
+| Choropleth mapping | ggplot2 + geom_sf |
+| Data integration | Joining statistics to boundaries |
+| Cartographic design | Color scales, projections |
+
+---
+
+[← Previous: Education Mobility](viz-education-mobility.qmd){.cta-button .secondary}
+[View Interactive Dashboards →](app-migration-austria.qmd){.cta-button}

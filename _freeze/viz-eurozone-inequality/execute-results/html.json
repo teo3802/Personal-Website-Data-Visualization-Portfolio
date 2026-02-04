@@ -1,0 +1,15 @@
+{
+  "hash": "a67eec145ed8c2aef91f359ea6fe0ab6",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Euro Area Inequality\"\nsubtitle: \"Visualizing income and wealth disparities across the Eurozone\"\n---\n\n## Overview\n\nThis visualization presents a comprehensive analysis of inequality patterns across Euro Area member states. The chart combines multiple data dimensions to reveal the complex landscape of economic disparities within the Eurozone.\n\n## Visualization\n\n::: {.viz-container}\n![Euro Area Inequality Analysis](images/Pic1.png){fig-alt=\"Euro Area Inequality visualization showing comparative analysis across Eurozone countries\"}\n:::\n\n## Methodology\n\n### Data Sources\n- **EU-SILC (Statistics on Income and Living Conditions)** - Primary source for income distribution data\n- **Eurostat** - Regional and national economic indicators\n\n### Technical Approach\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"show\"}\n# Key packages used in this visualization\nlibrary(tidyverse)\nlibrary(eurostat)\nlibrary(ggplot2)\nlibrary(ggtext)\n\n# Data retrieval from Eurostat\n# inequality_data <- get_eurostat(\"ilc_di12\")\n\n# ggplot2 for publication-quality graphics\n# Custom color palettes for accessibility\n# Faceting for multi-country comparisons\n```\n:::\n\n\n### Key Features\n- **Multi-dimensional comparison** across Eurozone countries\n- **Clean, publication-ready** aesthetic design\n- **Consistent color encoding** for interpretability\n\n## Skills Demonstrated\n\n| Skill | Application |\n|-------|-------------|\n| Data retrieval | Eurostat API integration |\n| Data wrangling | dplyr transformations |\n| Visualization | ggplot2 layered graphics |\n| Design | Custom themes, color palettes |\n\n---\n\n[← Back to Portfolio](index.qmd){.cta-button .secondary}\n[Next: Income Dynamics →](viz-income-dynamics.qmd){.cta-button}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,60 @@
+---
+title: "Income Inequality Dynamics"
+subtitle: "Tracking the evolution of income distribution over time"
+---
+
+## Overview
+
+This visualization captures the temporal dynamics of income inequality, illustrating how income distributions have shifted and evolved. The analysis tracks key inequality metrics such as Gini coefficients and income quintile ratios across time.
+
+## Visualization
+
+::: {.viz-container}
+![Income Inequality Dynamics](images/Pic2.png){fig-alt="Time series visualization of income inequality dynamics showing trends in income distribution"}
+:::
+
+## Methodology
+
+### Data Sources
+- **National statistical offices** - Household income surveys
+- **EU-SILC longitudinal data** - Panel data for tracking changes
+
+### Technical Approach
+
+```{r}
+#| eval: false
+#| code-fold: show
+
+# Key packages used
+library(tidyverse)
+library(ggplot2)
+library(scales)
+
+# Time series analysis of inequality metrics
+# Gini coefficient calculations
+# Quintile ratio analysis (S80/S20)
+
+# Visualization techniques:
+# - Line plots for temporal trends
+# - Area charts for distribution shifts
+# - Annotations for key policy events
+```
+
+### Key Features
+- **Longitudinal perspective** on inequality trends
+- **Multiple metrics** for comprehensive analysis
+- **Context-aware annotations** for interpretation
+
+## Skills Demonstrated
+
+| Skill | Application |
+|-------|-------------|
+| Time series analysis | Trend identification |
+| Statistical measures | Gini, quintile ratios |
+| Visual storytelling | Annotated graphics |
+| Data transformation | Long-format reshaping |
+
+---
+
+[← Previous: Euro Area Inequality](viz-eurozone-inequality.qmd){.cta-button .secondary}
+[Next: Education Mobility →](viz-education-mobility.qmd){.cta-button}

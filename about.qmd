@@ -1,0 +1,112 @@
+---
+title: "About"
+subtitle: "Teodor Nikolaev Nikolov"
+---
+
+## Profile
+
+I am a quantitative researcher with expertise in data visualization, statistical analysis, and interactive dashboard development. My work focuses on economic and social policy research, with particular interest in:
+
+- **Income and wealth inequality** analysis
+- **Migration and integration** statistics
+- **Educational mobility** research
+- **Regional/spatial economics**
+
+## Technical Skills
+
+### Programming Languages
+
+::: {.grid}
+::: {.g-col-4}
+**R**
+★★★★★
+
+Primary language for statistical analysis and visualization
+:::
+
+::: {.g-col-4}
+**SQL**
+★★★★☆
+
+Database querying and data management
+:::
+
+::: {.g-col-4}
+**Python**
+★★★☆☆
+
+Data processing and automation
+:::
+:::
+
+### Data Visualization
+
+| Tool | Proficiency | Use Cases |
+|------|-------------|-----------|
+| ggplot2 | Expert | Publication-quality graphics |
+| plotly | Advanced | Interactive charts |
+| Shiny | Advanced | Web applications |
+| flexdashboard | Advanced | Analytical dashboards |
+| leaflet | Intermediate | Interactive maps |
+
+### Data Wrangling & Analysis
+
+- **tidyverse ecosystem**: dplyr, tidyr, purrr, stringr
+- **Spatial analysis**: sf, giscoR, rnaturalearth
+- **Data formats**: Arrow/Parquet, Excel, CSV, JSON
+- **APIs**: Eurostat, OECD.Stat, World Bank
+
+### Reporting & Documentation
+
+- **Quarto** - Modern scientific publishing
+- **R Markdown** - Reproducible reports
+- **LaTeX** - Academic documents
+
+## Education
+
+*[Add your educational background here]*
+
+## Professional Experience
+
+*[Add your work experience here]*
+
+## Publications & Projects
+
+*[Add relevant publications or projects]*
+
+## Contact
+
+I'm always interested in discussing new opportunities, collaborations, or just connecting with fellow data enthusiasts.
+
+::: {.grid}
+::: {.g-col-4}
+### 📧 Email
+[your.email@example.com](mailto:your.email@example.com)
+:::
+
+::: {.g-col-4}
+### 💼 LinkedIn
+[linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
+:::
+
+::: {.g-col-4}
+### 🐙 GitHub
+[github.com/yourusername](https://github.com/yourusername)
+:::
+:::
+
+---
+
+## This Portfolio
+
+This portfolio website was built using:
+
+- **Quarto** - Open-source scientific and technical publishing
+- **GitHub Pages** - Free static site hosting
+- **Custom CSS** - Tailored styling for professional presentation
+
+The source code for this portfolio is available on GitHub.
+
+---
+
+[← Back to Portfolio](index.qmd){.cta-button}

@@ -1,0 +1,26 @@
+{
+  "viz-education-mobility.qmd": {
+    "viz-education-mobility.html": "2661ff56"
+  },
+  "viz-eurozone-inequality.qmd": {
+    "viz-eurozone-inequality.html": "230bcb5a"
+  },
+  "app-migration-austria.qmd": {
+    "app-migration-austria.html": "2730e111"
+  },
+  "viz-spatial-inequality.qmd": {
+    "viz-spatial-inequality.html": "fa4ac391"
+  },
+  "viz-income-dynamics.qmd": {
+    "viz-income-dynamics.html": "163c682d"
+  },
+  "index.qmd": {
+    "index.html": "716bdbb1"
+  },
+  "about.qmd": {
+    "about.html": "5117d826"
+  },
+  "app-oecd-education.qmd": {
+    "app-oecd-education.html": "f629e699"
+  }
+}

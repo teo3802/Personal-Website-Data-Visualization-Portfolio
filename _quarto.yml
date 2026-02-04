@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Teodor Nikolov | Data Visualization Portfolio"
+  description: "Showcasing quantitative analysis and data visualization skills across R, Shiny, and interactive dashboards"
+  
+  navbar:
+    background: "#1a1a2e"
+    foreground: "#eaeaea"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Static Visualizations"
+        menu:
+          - text: "Euro Area Inequality"
+            href: viz-eurozone-inequality.qmd
+          - text: "Income Inequality Dynamics"
+            href: viz-income-dynamics.qmd
+          - text: "Education Mobility (Austria)"
+            href: viz-education-mobility.qmd
+          - text: "Spatial Inequality (CEE)"
+            href: viz-spatial-inequality.qmd
+      - text: "Interactive Dashboards"
+        menu:
+          - text: "Migration in Austria (Shiny)"
+            href: app-migration-austria.qmd
+          - text: "OECD Education Dashboard"
+            href: app-oecd-education.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/yourusername
+      - icon: linkedin
+        href: https://linkedin.com/in/yourusername
+
+  page-footer:
+    center: "© 2026 Teodor Nikolaev Nikolov | Built with Quarto"
+    background: "#1a1a2e"
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    code-tools: true
+    highlight-style: github
+
+execute:
+  freeze: auto

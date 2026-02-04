@@ -1,0 +1,182 @@
+---
+title: "Data Visualization Portfolio"
+---
+
+::: {.hero-section}
+# Teodor Nikolaev Nikolov
+
+**Data Visualization & Quantitative Analysis Portfolio**
+
+Showcasing expertise in statistical analysis, interactive dashboards, and data storytelling using R, Shiny, and modern visualization tools.
+:::
+
+## Featured Skills {.section-header}
+
+::: {.tech-grid}
+::: {.tech-item}
+**R & RStudio**
+Statistical Computing
+:::
+
+::: {.tech-item}
+**Shiny**
+Interactive Apps
+:::
+
+::: {.tech-item}
+**ggplot2**
+Data Visualization
+:::
+
+::: {.tech-item}
+**Plotly**
+Interactive Charts
+:::
+
+::: {.tech-item}
+**Quarto**
+Reproducible Reports
+:::
+
+::: {.tech-item}
+**Flexdashboard**
+Dashboards
+:::
+:::
+
+---
+
+## Static Visualizations {.section-header}
+
+Explore my work in creating publication-ready visualizations for economic and social research.
+
+::: {.grid}
+::: {.g-col-6}
+::: {.project-card}
+[![Euro Area Inequality](images/Pic1.png)](viz-eurozone-inequality.qmd)
+
+::: {.project-card-body}
+[**Euro Area Inequality**]{.project-card-title}
+
+Analysis of income and wealth inequality patterns across Eurozone member states using EU-SILC data.
+
+[R]{.skill-badge .r} [ggplot2]{.skill-badge .ggplot} [Eurostat]{.skill-badge}
+:::
+:::
+:::
+
+::: {.g-col-6}
+::: {.project-card}
+[![Income Inequality Dynamics](images/Pic2.png)](viz-income-dynamics.qmd)
+
+::: {.project-card-body}
+[**Income Inequality Dynamics**]{.project-card-title}
+
+Time-series visualization of income distribution changes and Gini coefficient trends.
+
+[R]{.skill-badge .r} [ggplot2]{.skill-badge .ggplot} [dplyr]{.skill-badge}
+:::
+:::
+:::
+
+::: {.g-col-6}
+::: {.project-card}
+[![Education Mobility](images/Pic3.png)](viz-education-mobility.qmd)
+
+::: {.project-card-body}
+[**Intergenerational Education Mobility**]{.project-card-title}
+
+Visualization of educational attainment transitions between generations in Austria.
+
+[R]{.skill-badge .r} [ggplot2]{.skill-badge .ggplot} [OECD Data]{.skill-badge}
+:::
+:::
+:::
+
+::: {.g-col-6}
+::: {.project-card}
+[![Spatial Inequality](images/Pic4.png)](viz-spatial-inequality.qmd)
+
+::: {.project-card-body}
+[**Spatial Inequality in CEE**]{.project-card-title}
+
+Geospatial analysis of regional disparities in Central and Eastern European countries.
+
+[R]{.skill-badge .r} [sf]{.skill-badge} [giscoR]{.skill-badge}
+:::
+:::
+:::
+:::
+
+---
+
+## Interactive Dashboards {.section-header}
+
+Experience my interactive Shiny applications designed for data exploration and analysis.
+
+::: {.grid}
+::: {.g-col-6}
+::: {.project-card}
+::: {.project-card-body}
+[**Migration in Austria**]{.project-card-title}
+
+Interactive Shiny dashboard exploring migration patterns across Austrian Bundesländer with population demographics, pictogram visualizations, and interactive choropleth maps.
+
+**Features:**
+
+- Dynamic filtering by demographic dimensions
+- Pictogram visualizations (isotype charts)
+- Interactive map with hover tooltips
+- Bundesland-level migration statistics
+
+[Shiny]{.skill-badge .shiny} [Plotly]{.skill-badge .plotly} [sf]{.skill-badge}
+
+[🔗 Live App](https://teonikolov38.shinyapps.io/migration-austria/){.cta-button target="_blank"} [View Details →](app-migration-austria.qmd){.cta-button .secondary}
+:::
+:::
+:::
+
+::: {.g-col-6}
+::: {.project-card}
+::: {.project-card-body}
+[**OECD Education Attainment Dashboard**]{.project-card-title}
+
+Flexdashboard comparing educational attainment levels between native-born and foreign-born populations across OECD countries.
+
+**Features:**
+
+- Country-level comparisons
+- Birth place & education level filters
+- Interactive choropleth world map
+- Year range selection
+
+[Flexdashboard]{.skill-badge} [Plotly]{.skill-badge .plotly} [Arrow]{.skill-badge}
+
+[🔗 Live App](https://teonikolov38.shinyapps.io/oecd-education/){.cta-button target="_blank"} [View Details →](app-oecd-education.qmd){.cta-button .secondary}
+:::
+:::
+:::
+:::
+
+---
+
+## Technical Proficiencies {.section-header}
+
+| Category | Technologies |
+|----------|--------------|
+| **Languages** | R, SQL, Python |
+| **Visualization** | ggplot2, plotly, leaflet, highcharter |
+| **Dashboards** | Shiny, flexdashboard, Quarto |
+| **Data Wrangling** | dplyr, tidyr, data.table, arrow |
+| **Geospatial** | sf, rnaturalearth, giscoR, tmap |
+| **Reporting** | Quarto, R Markdown, LaTeX |
+
+---
+
+## Contact {.section-header}
+
+Interested in collaborating or discussing opportunities?
+
+[📧 Email Me](mailto:your.email@example.com){.cta-button}
+[💼 LinkedIn](https://linkedin.com/in/yourusername){.cta-button .secondary}
+[🐙 GitHub](https://github.com/yourusername){.cta-button .secondary}

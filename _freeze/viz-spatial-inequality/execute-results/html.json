@@ -1,0 +1,15 @@
+{
+  "hash": "74578fb59ce311a6624c560ac7135b34",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Spatial Inequality in Central and Eastern Europe\"\nsubtitle: \"Geospatial analysis of regional disparities\"\n---\n\n## Overview\n\nThis visualization presents a geospatial analysis of regional inequalities across Central and Eastern European (CEE) countries. The map reveals spatial patterns of economic development, highlighting urban-rural divides and cross-border disparities.\n\n## Visualization\n\n::: {.viz-container}\n![Spatial Inequality in Central and Eastern Europe](images/Pic4.png){fig-alt=\"Choropleth map showing spatial distribution of inequality indicators across Central and Eastern European regions\"}\n:::\n\n## Methodology\n\n### Data Sources\n- **Eurostat Regional Statistics** - NUTS-2/NUTS-3 level data\n- **GISCO (Geographic Information System of the Commission)** - Spatial boundaries\n- **National statistical offices** - Supplementary regional data\n\n### Technical Approach\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"show\"}\n# Key packages used\nlibrary(tidyverse)\nlibrary(sf)           # Simple features for spatial data\nlibrary(giscoR)       # Eurostat geographic data\nlibrary(ggplot2)\n\n# Spatial data handling\n# cee_regions <- gisco_get_nuts(\n#   year = \"2021\",\n#   resolution = \"10\",\n#   nuts_level = \"2\"\n# )\n\n# Choropleth mapping\n# Regional inequality indices\n# Cross-border pattern analysis\n```\n:::\n\n\n### Key Features\n- **High-resolution regional mapping** at NUTS-2/NUTS-3 level\n- **Comparative cross-country analysis** within CEE\n- **Urban-rural gradient visualization**\n\n## Spatial Patterns Revealed\n\nThe analysis highlights several key patterns:\n\n| Pattern | Description |\n|---------|-------------|\n| **Capital city effect** | Concentration of prosperity around capitals |\n| **East-West gradient** | Persistent disparities within countries |\n| **Border effects** | Economic differences at national boundaries |\n| **Industrial legacy** | Impact of historical industrial centers |\n\n## Geospatial Skills Demonstrated\n\n| Skill | Application |\n|-------|-------------|\n| Spatial data handling | sf package for geometries |\n| Choropleth mapping | ggplot2 + geom_sf |\n| Data integration | Joining statistics to boundaries |\n| Cartographic design | Color scales, projections |\n\n---\n\n[← Previous: Education Mobility](viz-education-mobility.qmd){.cta-button .secondary}\n[View Interactive Dashboards →](app-migration-austria.qmd){.cta-button}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

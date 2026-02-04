@@ -1,0 +1,15 @@
+{
+  "hash": "f052adb8ec8181e90e4420c67a5ad4e7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Income Inequality Dynamics\"\nsubtitle: \"Tracking the evolution of income distribution over time\"\n---\n\n## Overview\n\nThis visualization captures the temporal dynamics of income inequality, illustrating how income distributions have shifted and evolved. The analysis tracks key inequality metrics such as Gini coefficients and income quintile ratios across time.\n\n## Visualization\n\n::: {.viz-container}\n![Income Inequality Dynamics](images/Pic2.png){fig-alt=\"Time series visualization of income inequality dynamics showing trends in income distribution\"}\n:::\n\n## Methodology\n\n### Data Sources\n- **National statistical offices** - Household income surveys\n- **EU-SILC longitudinal data** - Panel data for tracking changes\n\n### Technical Approach\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"show\"}\n# Key packages used\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(scales)\n\n# Time series analysis of inequality metrics\n# Gini coefficient calculations\n# Quintile ratio analysis (S80/S20)\n\n# Visualization techniques:\n# - Line plots for temporal trends\n# - Area charts for distribution shifts\n# - Annotations for key policy events\n```\n:::\n\n\n### Key Features\n- **Longitudinal perspective** on inequality trends\n- **Multiple metrics** for comprehensive analysis\n- **Context-aware annotations** for interpretation\n\n## Skills Demonstrated\n\n| Skill | Application |\n|-------|-------------|\n| Time series analysis | Trend identification |\n| Statistical measures | Gini, quintile ratios |\n| Visual storytelling | Annotated graphics |\n| Data transformation | Long-format reshaping |\n\n---\n\n[← Previous: Euro Area Inequality](viz-eurozone-inequality.qmd){.cta-button .secondary}\n[Next: Education Mobility →](viz-education-mobility.qmd){.cta-button}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

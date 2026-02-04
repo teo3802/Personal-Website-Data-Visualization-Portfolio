@@ -1,0 +1,69 @@
+---
+title: "Intergenerational Education Mobility"
+subtitle: "Educational attainment transitions between generations in Austria"
+---
+
+## Overview
+
+This visualization explores intergenerational educational mobility in Austria, examining how educational attainment levels transmit across generations. The analysis reveals patterns of upward mobility, persistence, and barriers in educational achievement.
+
+## Visualization
+
+::: {.viz-container}
+![Intergenerational Education Mobility in Austria](images/Pic3.png){fig-alt="Sankey or transition diagram showing educational attainment mobility between parent and child generations in Austria"}
+:::
+
+## Methodology
+
+### Data Sources
+- **OECD Education at a Glance** - International education statistics
+- **Statistik Austria** - National education surveys
+- **EU-LFS (Labour Force Survey)** - Educational background data
+
+### Technical Approach
+
+```{r}
+#| eval: false
+#| code-fold: show
+
+# Key packages used
+library(tidyverse)
+library(ggplot2)
+library(ggalluvial)  # for Sankey/alluvial diagrams
+
+# Transition matrix calculation
+# Parent education → Child education flows
+# Mobility index computation
+
+# Visualization approaches:
+# - Alluvial/Sankey diagrams for flows
+# - Heatmaps for transition probabilities
+# - Slope charts for generational comparison
+```
+
+### Key Features
+- **Flow visualization** showing educational transitions
+- **Quantified mobility** metrics
+- **Generational comparison** framework
+
+## Interpretation
+
+The visualization reveals:
+
+- **Persistence patterns** - Where educational attainment tends to be inherited
+- **Upward mobility corridors** - Paths of educational advancement
+- **Structural barriers** - Bottlenecks in educational progression
+
+## Skills Demonstrated
+
+| Skill | Application |
+|-------|-------------|
+| Transition analysis | Mobility matrices |
+| Flow visualization | Alluvial diagrams |
+| Social statistics | Intergenerational metrics |
+| Policy relevance | Educational equity analysis |
+
+---
+
+[← Previous: Income Dynamics](viz-income-dynamics.qmd){.cta-button .secondary}
+[Next: Spatial Inequality →](viz-spatial-inequality.qmd){.cta-button}

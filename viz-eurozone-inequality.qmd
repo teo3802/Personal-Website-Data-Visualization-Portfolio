@@ -1,0 +1,59 @@
+---
+title: "Euro Area Inequality"
+subtitle: "Visualizing income and wealth disparities across the Eurozone"
+---
+
+## Overview
+
+This visualization presents a comprehensive analysis of inequality patterns across Euro Area member states. The chart combines multiple data dimensions to reveal the complex landscape of economic disparities within the Eurozone.
+
+## Visualization
+
+::: {.viz-container}
+![Euro Area Inequality Analysis](images/Pic1.png){fig-alt="Euro Area Inequality visualization showing comparative analysis across Eurozone countries"}
+:::
+
+## Methodology
+
+### Data Sources
+- **EU-SILC (Statistics on Income and Living Conditions)** - Primary source for income distribution data
+- **Eurostat** - Regional and national economic indicators
+
+### Technical Approach
+
+```{r}
+#| eval: false
+#| code-fold: show
+
+# Key packages used in this visualization
+library(tidyverse)
+library(eurostat)
+library(ggplot2)
+library(ggtext)
+
+# Data retrieval from Eurostat
+# inequality_data <- get_eurostat("ilc_di12")
+
+# ggplot2 for publication-quality graphics
+# Custom color palettes for accessibility
+# Faceting for multi-country comparisons
+```
+
+### Key Features
+- **Multi-dimensional comparison** across Eurozone countries
+- **Clean, publication-ready** aesthetic design
+- **Consistent color encoding** for interpretability
+
+## Skills Demonstrated
+
+| Skill | Application |
+|-------|-------------|
+| Data retrieval | Eurostat API integration |
+| Data wrangling | dplyr transformations |
+| Visualization | ggplot2 layered graphics |
+| Design | Custom themes, color palettes |
+
+---
+
+[← Back to Portfolio](index.qmd){.cta-button .secondary}
+[Next: Income Dynamics →](viz-income-dynamics.qmd){.cta-button}

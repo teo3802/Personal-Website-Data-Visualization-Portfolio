@@ -1,0 +1,152 @@
+---
+title: "Migration in Austria"
+subtitle: "Interactive Shiny Dashboard for Austrian Migration Demographics"
+---
+
+## 🚀 Live Dashboard
+
+::: {.callout-tip}
+## Try it now!
+**[Open Full Dashboard →](https://teonikolov38.shinyapps.io/migration-austria/){target="_blank"}**
+:::
+
+### Embedded Preview
+
+<iframe src="https://teonikolov38.shinyapps.io/migration-austria/" 
+        style="width: 100%; height: 700px; border: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+</iframe>
+
+---
+
+## Overview
+
+This interactive Shiny application provides a comprehensive exploration of migration patterns across Austria's nine Bundesländer (federal states). The dashboard combines demographic visualizations with geospatial mapping to reveal the distribution and composition of Austria's population with migration background.
+
+## Dashboard Features
+
+### 📊 Dynamic Bar Charts & Pictograms
+
+The application offers multiple visualization modes:
+
+- **Bar charts** showing population distribution by various dimensions
+- **Isotype pictograms** where each icon represents 100,000 people
+- **Color-coded categories** for citizenship and origin countries
+
+### 🗺️ Interactive Choropleth Map
+
+- Hover over any Bundesland to see detailed statistics
+- Population with migration background (1st and 2nd generation)
+- Share percentages with color intensity encoding
+- Emoji-based pictograms overlaid on the map
+
+### 🔧 User Controls
+
+| Control | Options |
+|---------|---------|
+| Dimension | Citizenship, Country of Birth, Age & Gender, Parents' birthplace |
+| Metric | Total population, Migration total, 1st Generation, 2nd Generation |
+
+## Technical Implementation
+
+```{r}
+#| eval: false
+#| code-fold: show
+
+# Core libraries
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(sf)
+library(rnaturalearth)
+
+# Key technical features:
+# 1. Reactive filtering based on user input
+# 2. Conditional rendering (pictogram vs bar chart)
+# 3. sf spatial data with Austrian Bundesland boundaries
+# 4. ggplotly conversion for interactive tooltips
+# 5. Custom color palettes for citizenship categories
+
+# Pictogram visualization (isotype chart)
+ggplot(df_units, aes(x = col, y = row, colour = category)) +
+  geom_text(
+    label = "\U0001F9CD",  # Standing person emoji
+    size = 7,
+    family = "Apple Color Emoji"
+  ) +
+  facet_wrap(~ category, nrow = 1)
+```
+
+## Data Sources
+
+- **Statistik Austria** - Official population statistics
+- **Mikrozensus-Arbeitskräfteerhebung** - Labour force survey
+- **rnaturalearth** - Austrian administrative boundaries
+
+## Screenshots & Demo
+
+::: {.callout-note}
+## Live Demo
+This Shiny application requires a server to run interactively. See deployment options below.
+:::
+
+### Sample Outputs
+
+The dashboard produces visualizations like:
+
+1. **Population by Citizenship** - Pictogram showing Austrian nationals vs. EU and non-EU citizens
+2. **Bundesland Map** - Choropleth showing migration background concentration (highest in Vienna at ~46%)
+3. **Age & Gender Breakdown** - Pink/blue bar charts for demographic analysis
+
+## Deployment Options
+
+To view this dashboard interactively, you have several options:
+
+### Option 1: ShinyApps.io (Recommended)
+
+```bash
+# Install rsconnect
+install.packages("rsconnect")
+
+# Deploy to shinyapps.io
+library(rsconnect)
+rsconnect::deployApp("path/to/app")
+```
+
+### Option 2: Run Locally
+
+```r
+# Clone the repository and run:
+shiny::runApp("app.R")
+```
+
+### Option 3: Shiny Server / Posit Connect
+
+For organizational deployment with authentication and scaling.
+
+## Skills Demonstrated
+
+| Category | Skills |
+|----------|--------|
+| **Shiny** | Reactive programming, UI/Server architecture |
+| **Visualization** | ggplot2, plotly, pictograms |
+| **Geospatial** | sf, rnaturalearth, choropleth maps |
+| **Data Wrangling** | dplyr, tidyr, data transformation |
+| **UX Design** | Interactive tooltips, dynamic filtering |
+
+## Source Code
+
+::: {.callout-tip collapse="true"}
+## View Full Source Code
+
+The complete source code for this application is available in the repository. Key components include:
+
+- `app.R` - Main Shiny application (UI + Server)
+- Data preprocessing for Bundesland-level statistics
+- Custom color palettes and emoji grid positioning
+:::
+
+---
+
+[← Back to Portfolio](index.qmd){.cta-button .secondary}
+[Next: OECD Education Dashboard →](app-oecd-education.qmd){.cta-button}

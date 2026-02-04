@@ -1,0 +1,401 @@
+[
+  {
+    "objectID": "app-oecd-education.html",
+    "href": "app-oecd-education.html",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "",
+    "text": "TipTry it now!\n\n\n\nOpen Full Dashboard →"
+  },
+  {
+    "objectID": "app-oecd-education.html#live-dashboard",
+    "href": "app-oecd-education.html#live-dashboard",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "",
+    "text": "TipTry it now!\n\n\n\nOpen Full Dashboard →"
+  },
+  {
+    "objectID": "app-oecd-education.html#overview",
+    "href": "app-oecd-education.html#overview",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Overview",
+    "text": "Overview\nThis interactive flexdashboard provides a comparative analysis of educational attainment levels between native-born and foreign-born populations across OECD member countries (plus Bulgaria and Romania). The dashboard enables exploration of education-migration intersections through interactive visualizations."
+  },
+  {
+    "objectID": "app-oecd-education.html#dashboard-features",
+    "href": "app-oecd-education.html#dashboard-features",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Dashboard Features",
+    "text": "Dashboard Features\n\n📊 Stacked Bar Chart\n\nCompare native-born vs. foreign-born populations\nEducational levels: Below upper secondary, Upper secondary, Tertiary\nCountry-specific analysis with aggregation over selected years\n\n\n\n🌍 Interactive World Map\n\nChoropleth visualization of OECD + EU countries\nFilter by birth place (native/foreign-born)\nFilter by education level\nNatural Earth projection for global context\n\n\n\n⚙️ Interactive Controls\n\n\n\nControl\nDescription\n\n\n\n\nCountry\nSelect country for bar chart comparison\n\n\nBirth place\nNative-born or Foreign-born filter for map\n\n\nEducation level\nFilter map by educational attainment\n\n\nYear range\nSlider for temporal aggregation"
+  },
+  {
+    "objectID": "app-oecd-education.html#technical-implementation",
+    "href": "app-oecd-education.html#technical-implementation",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Technical Implementation",
+    "text": "Technical Implementation\n\n\nCode\n# Core libraries\nlibrary(flexdashboard)\nlibrary(shiny)\nlibrary(dplyr)\nlibrary(plotly)\nlibrary(arrow)\n\n# Data loaded from Parquet format (efficient columnar storage)\neduc &lt;- arrow::read_parquet(\"OECD_EducAtt.parquet\")\n\n# Interactive bar chart with plotly\nplot_ly(\n  data  = df_top,\n  x     = ~BirthPlace,\n  y     = ~Value,\n  color = ~EducLevel,\n  type  = \"bar\"\n) %&gt;%\n  layout(barmode = \"stack\")\n\n# Interactive choropleth map\nplot_ly(\n  df_map,\n  type = \"choropleth\",\n  locations = ~CountryCode,\n  z = ~Value,\n  locationmode = \"ISO-3\"\n) %&gt;%\n  layout(\n    geo = list(\n      projection = list(type = \"natural earth\")\n    )\n  )"
+  },
+  {
+    "objectID": "app-oecd-education.html#data-sources",
+    "href": "app-oecd-education.html#data-sources",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Data Sources",
+    "text": "Data Sources\n\nOECD Education at a Glance - Educational attainment statistics\nOECD.Stat - Migration and education cross-tabulations\nData stored in Apache Parquet format for efficient loading"
+  },
+  {
+    "objectID": "app-oecd-education.html#countries-covered",
+    "href": "app-oecd-education.html#countries-covered",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Countries Covered",
+    "text": "Countries Covered\nThe dashboard includes all 38 OECD member countries plus Bulgaria and Romania:\n\n\n\nAustralia\nAustria\nBelgium\nCanada\nChile\nColombia\nCosta Rica\nCzech Republic\nDenmark\nEstonia\nFinland\nFrance\nGermany\nGreece\n\n\n\nHungary\nIceland\nIreland\nIsrael\nItaly\nJapan\nKorea\nLatvia\nLithuania\nLuxembourg\nMexico\nNetherlands\nNew Zealand\n\n\n\nNorway\nPoland\nPortugal\nSlovakia\nSlovenia\nSpain\nSweden\nSwitzerland\nTurkey\nUnited Kingdom\nUnited States\nBulgaria\nRomania"
+  },
+  {
+    "objectID": "app-oecd-education.html#key-insights-enabled",
+    "href": "app-oecd-education.html#key-insights-enabled",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Key Insights Enabled",
+    "text": "Key Insights Enabled\nThe dashboard facilitates analysis of:\n\nIntegration outcomes - How do foreign-born populations compare in educational attainment?\nCountry differences - Which countries show largest gaps between native and foreign-born?\nTemporal trends - How have patterns changed over time?\nEducation levels - At which levels are gaps most pronounced?"
+  },
+  {
+    "objectID": "app-oecd-education.html#deployment-options",
+    "href": "app-oecd-education.html#deployment-options",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Deployment Options",
+    "text": "Deployment Options\n\nOption 1: ShinyApps.io\n# Flexdashboard with runtime: shiny requires Shiny server\nrsconnect::deployApp(\"NIKOLOV_GlobalMacroMonitor_OECD.Rmd\")\n\n\nOption 2: Posit Connect / Shiny Server\nFor organizational deployment with enhanced features.\n\n\nOption 3: Run Locally\nrmarkdown::run(\"NIKOLOV_GlobalMacroMonitor_OECD.Rmd\")"
+  },
+  {
+    "objectID": "app-oecd-education.html#skills-demonstrated",
+    "href": "app-oecd-education.html#skills-demonstrated",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nCategory\nSkills\n\n\n\n\nDashboard\nflexdashboard, Shiny runtime\n\n\nVisualization\nplotly, interactive charts, choropleths\n\n\nData Format\nApache Arrow/Parquet\n\n\nOECD Data\nInternational statistics, ISO-3 codes\n\n\nInteractivity\nReactive inputs, linked views"
+  },
+  {
+    "objectID": "app-oecd-education.html#data-pipeline",
+    "href": "app-oecd-education.html#data-pipeline",
+    "title": "OECD Education Attainment Dashboard",
+    "section": "Data Pipeline",
+    "text": "Data Pipeline\n\n\n\n\n\nflowchart LR\n    A[OECD.Stat API] --&gt; B[R Data Cleaning]\n    B --&gt; C[Parquet Storage]\n    C --&gt; D[Flexdashboard]\n    D --&gt; E[Interactive Viz]\n\n\n\n\n\n\n\n← Previous: Migration Austria Back to Portfolio →"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Visualization Portfolio",
+    "section": "",
+    "text": "Data Visualization & Quantitative Analysis Portfolio\nShowcasing expertise in statistical analysis, interactive dashboards, and data storytelling using R, Shiny, and modern visualization tools."
+  },
+  {
+    "objectID": "index.html#featured-skills",
+    "href": "index.html#featured-skills",
+    "title": "Data Visualization Portfolio",
+    "section": "Featured Skills",
+    "text": "Featured Skills\n\n\nR & RStudio Statistical Computing\n\n\nShiny Interactive Apps\n\n\nggplot2 Data Visualization\n\n\nPlotly Interactive Charts\n\n\nQuarto Reproducible Reports\n\n\nFlexdashboard Dashboards"
+  },
+  {
+    "objectID": "index.html#static-visualizations",
+    "href": "index.html#static-visualizations",
+    "title": "Data Visualization Portfolio",
+    "section": "Static Visualizations",
+    "text": "Static Visualizations\nExplore my work in creating publication-ready visualizations for economic and social research.\n\n\n\n\n\n\nEuro Area Inequality\n\n\n\nEuro Area Inequality\nAnalysis of income and wealth inequality patterns across Eurozone member states using EU-SILC data.\nR ggplot2 Eurostat\n\n\n\n\n\n\n\n\nIncome Inequality Dynamics\n\n\n\nIncome Inequality Dynamics\nTime-series visualization of income distribution changes and Gini coefficient trends.\nR ggplot2 dplyr\n\n\n\n\n\n\n\n\nEducation Mobility\n\n\n\nIntergenerational Education Mobility\nVisualization of educational attainment transitions between generations in Austria.\nR ggplot2 OECD Data\n\n\n\n\n\n\n\n\nSpatial Inequality\n\n\n\nSpatial Inequality in CEE\nGeospatial analysis of regional disparities in Central and Eastern European countries.\nR sf giscoR"
+  },
+  {
+    "objectID": "index.html#interactive-dashboards",
+    "href": "index.html#interactive-dashboards",
+    "title": "Data Visualization Portfolio",
+    "section": "Interactive Dashboards",
+    "text": "Interactive Dashboards\nExperience my interactive Shiny applications designed for data exploration and analysis.\n\n\n\n\nMigration in Austria\nInteractive Shiny dashboard exploring migration patterns across Austrian Bundesländer with population demographics, pictogram visualizations, and interactive choropleth maps.\nFeatures:\n\nDynamic filtering by demographic dimensions\nPictogram visualizations (isotype charts)\nInteractive map with hover tooltips\nBundesland-level migration statistics\n\nShiny Plotly sf\n🔗 Live App View Details →\n\n\n\n\n\n\nOECD Education Attainment Dashboard\nFlexdashboard comparing educational attainment levels between native-born and foreign-born populations across OECD countries.\nFeatures:\n\nCountry-level comparisons\nBirth place & education level filters\nInteractive choropleth world map\nYear range selection\n\nFlexdashboard Plotly Arrow\n🔗 Live App View Details →"
+  },
+  {
+    "objectID": "index.html#technical-proficiencies",
+    "href": "index.html#technical-proficiencies",
+    "title": "Data Visualization Portfolio",
+    "section": "Technical Proficiencies",
+    "text": "Technical Proficiencies\n\n\n\nCategory\nTechnologies\n\n\n\n\nLanguages\nR, SQL, Python\n\n\nVisualization\nggplot2, plotly, leaflet, highcharter\n\n\nDashboards\nShiny, flexdashboard, Quarto\n\n\nData Wrangling\ndplyr, tidyr, data.table, arrow\n\n\nGeospatial\nsf, rnaturalearth, giscoR, tmap\n\n\nReporting\nQuarto, R Markdown, LaTeX"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Data Visualization Portfolio",
+    "section": "Contact",
+    "text": "Contact\nInterested in collaborating or discussing opportunities?\n📧 Email Me 💼 LinkedIn 🐙 GitHub"
+  },
+  {
+    "objectID": "viz-spatial-inequality.html",
+    "href": "viz-spatial-inequality.html",
+    "title": "Spatial Inequality in Central and Eastern Europe",
+    "section": "",
+    "text": "This visualization presents a geospatial analysis of regional inequalities across Central and Eastern European (CEE) countries. The map reveals spatial patterns of economic development, highlighting urban-rural divides and cross-border disparities."
+  },
+  {
+    "objectID": "viz-spatial-inequality.html#overview",
+    "href": "viz-spatial-inequality.html#overview",
+    "title": "Spatial Inequality in Central and Eastern Europe",
+    "section": "",
+    "text": "This visualization presents a geospatial analysis of regional inequalities across Central and Eastern European (CEE) countries. The map reveals spatial patterns of economic development, highlighting urban-rural divides and cross-border disparities."
+  },
+  {
+    "objectID": "viz-spatial-inequality.html#visualization",
+    "href": "viz-spatial-inequality.html#visualization",
+    "title": "Spatial Inequality in Central and Eastern Europe",
+    "section": "Visualization",
+    "text": "Visualization\n\n\n\n\nSpatial Inequality in Central and Eastern Europe"
+  },
+  {
+    "objectID": "viz-spatial-inequality.html#methodology",
+    "href": "viz-spatial-inequality.html#methodology",
+    "title": "Spatial Inequality in Central and Eastern Europe",
+    "section": "Methodology",
+    "text": "Methodology\n\nData Sources\n\nEurostat Regional Statistics - NUTS-2/NUTS-3 level data\nGISCO (Geographic Information System of the Commission) - Spatial boundaries\nNational statistical offices - Supplementary regional data\n\n\n\nTechnical Approach\n\n\nCode\n# Key packages used\nlibrary(tidyverse)\nlibrary(sf)           # Simple features for spatial data\nlibrary(giscoR)       # Eurostat geographic data\nlibrary(ggplot2)\n\n# Spatial data handling\n# cee_regions &lt;- gisco_get_nuts(\n#   year = \"2021\",\n#   resolution = \"10\",\n#   nuts_level = \"2\"\n# )\n\n# Choropleth mapping\n# Regional inequality indices\n# Cross-border pattern analysis\n\n\n\n\nKey Features\n\nHigh-resolution regional mapping at NUTS-2/NUTS-3 level\nComparative cross-country analysis within CEE\nUrban-rural gradient visualization"
+  },
+  {
+    "objectID": "viz-spatial-inequality.html#spatial-patterns-revealed",
+    "href": "viz-spatial-inequality.html#spatial-patterns-revealed",
+    "title": "Spatial Inequality in Central and Eastern Europe",
+    "section": "Spatial Patterns Revealed",
+    "text": "Spatial Patterns Revealed\nThe analysis highlights several key patterns:\n\n\n\n\n\n\n\nPattern\nDescription\n\n\n\n\nCapital city effect\nConcentration of prosperity around capitals\n\n\nEast-West gradient\nPersistent disparities within countries\n\n\nBorder effects\nEconomic differences at national boundaries\n\n\nIndustrial legacy\nImpact of historical industrial centers"
+  },
+  {
+    "objectID": "viz-spatial-inequality.html#geospatial-skills-demonstrated",
+    "href": "viz-spatial-inequality.html#geospatial-skills-demonstrated",
+    "title": "Spatial Inequality in Central and Eastern Europe",
+    "section": "Geospatial Skills Demonstrated",
+    "text": "Geospatial Skills Demonstrated\n\n\n\nSkill\nApplication\n\n\n\n\nSpatial data handling\nsf package for geometries\n\n\nChoropleth mapping\nggplot2 + geom_sf\n\n\nData integration\nJoining statistics to boundaries\n\n\nCartographic design\nColor scales, projections\n\n\n\n\n← Previous: Education Mobility View Interactive Dashboards →"
+  },
+  {
+    "objectID": "viz-eurozone-inequality.html",
+    "href": "viz-eurozone-inequality.html",
+    "title": "Euro Area Inequality",
+    "section": "",
+    "text": "This visualization presents a comprehensive analysis of inequality patterns across Euro Area member states. The chart combines multiple data dimensions to reveal the complex landscape of economic disparities within the Eurozone."
+  },
+  {
+    "objectID": "viz-eurozone-inequality.html#overview",
+    "href": "viz-eurozone-inequality.html#overview",
+    "title": "Euro Area Inequality",
+    "section": "",
+    "text": "This visualization presents a comprehensive analysis of inequality patterns across Euro Area member states. The chart combines multiple data dimensions to reveal the complex landscape of economic disparities within the Eurozone."
+  },
+  {
+    "objectID": "viz-eurozone-inequality.html#visualization",
+    "href": "viz-eurozone-inequality.html#visualization",
+    "title": "Euro Area Inequality",
+    "section": "Visualization",
+    "text": "Visualization\n\n\n\n\nEuro Area Inequality Analysis"
+  },
+  {
+    "objectID": "viz-eurozone-inequality.html#methodology",
+    "href": "viz-eurozone-inequality.html#methodology",
+    "title": "Euro Area Inequality",
+    "section": "Methodology",
+    "text": "Methodology\n\nData Sources\n\nEU-SILC (Statistics on Income and Living Conditions) - Primary source for income distribution data\nEurostat - Regional and national economic indicators\n\n\n\nTechnical Approach\n\n\nCode\n# Key packages used in this visualization\nlibrary(tidyverse)\nlibrary(eurostat)\nlibrary(ggplot2)\nlibrary(ggtext)\n\n# Data retrieval from Eurostat\n# inequality_data &lt;- get_eurostat(\"ilc_di12\")\n\n# ggplot2 for publication-quality graphics\n# Custom color palettes for accessibility\n# Faceting for multi-country comparisons\n\n\n\n\nKey Features\n\nMulti-dimensional comparison across Eurozone countries\nClean, publication-ready aesthetic design\nConsistent color encoding for interpretability"
+  },
+  {
+    "objectID": "viz-eurozone-inequality.html#skills-demonstrated",
+    "href": "viz-eurozone-inequality.html#skills-demonstrated",
+    "title": "Euro Area Inequality",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nSkill\nApplication\n\n\n\n\nData retrieval\nEurostat API integration\n\n\nData wrangling\ndplyr transformations\n\n\nVisualization\nggplot2 layered graphics\n\n\nDesign\nCustom themes, color palettes\n\n\n\n\n← Back to Portfolio Next: Income Dynamics →"
+  },
+  {
+    "objectID": "viz-education-mobility.html",
+    "href": "viz-education-mobility.html",
+    "title": "Intergenerational Education Mobility",
+    "section": "",
+    "text": "This visualization explores intergenerational educational mobility in Austria, examining how educational attainment levels transmit across generations. The analysis reveals patterns of upward mobility, persistence, and barriers in educational achievement."
+  },
+  {
+    "objectID": "viz-education-mobility.html#overview",
+    "href": "viz-education-mobility.html#overview",
+    "title": "Intergenerational Education Mobility",
+    "section": "",
+    "text": "This visualization explores intergenerational educational mobility in Austria, examining how educational attainment levels transmit across generations. The analysis reveals patterns of upward mobility, persistence, and barriers in educational achievement."
+  },
+  {
+    "objectID": "viz-education-mobility.html#visualization",
+    "href": "viz-education-mobility.html#visualization",
+    "title": "Intergenerational Education Mobility",
+    "section": "Visualization",
+    "text": "Visualization\n\n\n\n\nIntergenerational Education Mobility in Austria"
+  },
+  {
+    "objectID": "viz-education-mobility.html#methodology",
+    "href": "viz-education-mobility.html#methodology",
+    "title": "Intergenerational Education Mobility",
+    "section": "Methodology",
+    "text": "Methodology\n\nData Sources\n\nOECD Education at a Glance - International education statistics\nStatistik Austria - National education surveys\nEU-LFS (Labour Force Survey) - Educational background data\n\n\n\nTechnical Approach\n\n\nCode\n# Key packages used\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(ggalluvial)  # for Sankey/alluvial diagrams\n\n# Transition matrix calculation\n# Parent education → Child education flows\n# Mobility index computation\n\n# Visualization approaches:\n# - Alluvial/Sankey diagrams for flows\n# - Heatmaps for transition probabilities\n# - Slope charts for generational comparison\n\n\n\n\nKey Features\n\nFlow visualization showing educational transitions\nQuantified mobility metrics\nGenerational comparison framework"
+  },
+  {
+    "objectID": "viz-education-mobility.html#interpretation",
+    "href": "viz-education-mobility.html#interpretation",
+    "title": "Intergenerational Education Mobility",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe visualization reveals:\n\nPersistence patterns - Where educational attainment tends to be inherited\nUpward mobility corridors - Paths of educational advancement\nStructural barriers - Bottlenecks in educational progression"
+  },
+  {
+    "objectID": "viz-education-mobility.html#skills-demonstrated",
+    "href": "viz-education-mobility.html#skills-demonstrated",
+    "title": "Intergenerational Education Mobility",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nSkill\nApplication\n\n\n\n\nTransition analysis\nMobility matrices\n\n\nFlow visualization\nAlluvial diagrams\n\n\nSocial statistics\nIntergenerational metrics\n\n\nPolicy relevance\nEducational equity analysis\n\n\n\n\n← Previous: Income Dynamics Next: Spatial Inequality →"
+  },
+  {
+    "objectID": "app-migration-austria.html",
+    "href": "app-migration-austria.html",
+    "title": "Migration in Austria",
+    "section": "",
+    "text": "TipTry it now!\n\n\n\nOpen Full Dashboard →"
+  },
+  {
+    "objectID": "app-migration-austria.html#live-dashboard",
+    "href": "app-migration-austria.html#live-dashboard",
+    "title": "Migration in Austria",
+    "section": "",
+    "text": "TipTry it now!\n\n\n\nOpen Full Dashboard →"
+  },
+  {
+    "objectID": "app-migration-austria.html#overview",
+    "href": "app-migration-austria.html#overview",
+    "title": "Migration in Austria",
+    "section": "Overview",
+    "text": "Overview\nThis interactive Shiny application provides a comprehensive exploration of migration patterns across Austria’s nine Bundesländer (federal states). The dashboard combines demographic visualizations with geospatial mapping to reveal the distribution and composition of Austria’s population with migration background."
+  },
+  {
+    "objectID": "app-migration-austria.html#dashboard-features",
+    "href": "app-migration-austria.html#dashboard-features",
+    "title": "Migration in Austria",
+    "section": "Dashboard Features",
+    "text": "Dashboard Features\n\n📊 Dynamic Bar Charts & Pictograms\nThe application offers multiple visualization modes:\n\nBar charts showing population distribution by various dimensions\nIsotype pictograms where each icon represents 100,000 people\nColor-coded categories for citizenship and origin countries\n\n\n\n🗺️ Interactive Choropleth Map\n\nHover over any Bundesland to see detailed statistics\nPopulation with migration background (1st and 2nd generation)\nShare percentages with color intensity encoding\nEmoji-based pictograms overlaid on the map\n\n\n\n🔧 User Controls\n\n\n\n\n\n\n\nControl\nOptions\n\n\n\n\nDimension\nCitizenship, Country of Birth, Age & Gender, Parents’ birthplace\n\n\nMetric\nTotal population, Migration total, 1st Generation, 2nd Generation"
+  },
+  {
+    "objectID": "app-migration-austria.html#technical-implementation",
+    "href": "app-migration-austria.html#technical-implementation",
+    "title": "Migration in Austria",
+    "section": "Technical Implementation",
+    "text": "Technical Implementation\n\n\nCode\n# Core libraries\nlibrary(shiny)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(plotly)\nlibrary(sf)\nlibrary(rnaturalearth)\n\n# Key technical features:\n# 1. Reactive filtering based on user input\n# 2. Conditional rendering (pictogram vs bar chart)\n# 3. sf spatial data with Austrian Bundesland boundaries\n# 4. ggplotly conversion for interactive tooltips\n# 5. Custom color palettes for citizenship categories\n\n# Pictogram visualization (isotype chart)\nggplot(df_units, aes(x = col, y = row, colour = category)) +\n  geom_text(\n    label = \"\\U0001F9CD\",  # Standing person emoji\n    size = 7,\n    family = \"Apple Color Emoji\"\n  ) +\n  facet_wrap(~ category, nrow = 1)"
+  },
+  {
+    "objectID": "app-migration-austria.html#data-sources",
+    "href": "app-migration-austria.html#data-sources",
+    "title": "Migration in Austria",
+    "section": "Data Sources",
+    "text": "Data Sources\n\nStatistik Austria - Official population statistics\nMikrozensus-Arbeitskräfteerhebung - Labour force survey\nrnaturalearth - Austrian administrative boundaries"
+  },
+  {
+    "objectID": "app-migration-austria.html#screenshots-demo",
+    "href": "app-migration-austria.html#screenshots-demo",
+    "title": "Migration in Austria",
+    "section": "Screenshots & Demo",
+    "text": "Screenshots & Demo\n\n\n\n\n\n\nNoteLive Demo\n\n\n\nThis Shiny application requires a server to run interactively. See deployment options below.\n\n\n\nSample Outputs\nThe dashboard produces visualizations like:\n\nPopulation by Citizenship - Pictogram showing Austrian nationals vs. EU and non-EU citizens\nBundesland Map - Choropleth showing migration background concentration (highest in Vienna at ~46%)\nAge & Gender Breakdown - Pink/blue bar charts for demographic analysis"
+  },
+  {
+    "objectID": "app-migration-austria.html#deployment-options",
+    "href": "app-migration-austria.html#deployment-options",
+    "title": "Migration in Austria",
+    "section": "Deployment Options",
+    "text": "Deployment Options\nTo view this dashboard interactively, you have several options:\n\nOption 1: ShinyApps.io (Recommended)\n# Install rsconnect\ninstall.packages(\"rsconnect\")\n\n# Deploy to shinyapps.io\nlibrary(rsconnect)\nrsconnect::deployApp(\"path/to/app\")\n\n\nOption 2: Run Locally\n# Clone the repository and run:\nshiny::runApp(\"app.R\")\n\n\nOption 3: Shiny Server / Posit Connect\nFor organizational deployment with authentication and scaling."
+  },
+  {
+    "objectID": "app-migration-austria.html#skills-demonstrated",
+    "href": "app-migration-austria.html#skills-demonstrated",
+    "title": "Migration in Austria",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nCategory\nSkills\n\n\n\n\nShiny\nReactive programming, UI/Server architecture\n\n\nVisualization\nggplot2, plotly, pictograms\n\n\nGeospatial\nsf, rnaturalearth, choropleth maps\n\n\nData Wrangling\ndplyr, tidyr, data transformation\n\n\nUX Design\nInteractive tooltips, dynamic filtering"
+  },
+  {
+    "objectID": "app-migration-austria.html#source-code",
+    "href": "app-migration-austria.html#source-code",
+    "title": "Migration in Austria",
+    "section": "Source Code",
+    "text": "Source Code\n\n\n\n\n\n\nTipView Full Source Code\n\n\n\n\n\nThe complete source code for this application is available in the repository. Key components include:\n\napp.R - Main Shiny application (UI + Server)\nData preprocessing for Bundesland-level statistics\nCustom color palettes and emoji grid positioning\n\n\n\n\n\n← Back to Portfolio Next: OECD Education Dashboard →"
+  },
+  {
+    "objectID": "viz-income-dynamics.html",
+    "href": "viz-income-dynamics.html",
+    "title": "Income Inequality Dynamics",
+    "section": "",
+    "text": "This visualization captures the temporal dynamics of income inequality, illustrating how income distributions have shifted and evolved. The analysis tracks key inequality metrics such as Gini coefficients and income quintile ratios across time."
+  },
+  {
+    "objectID": "viz-income-dynamics.html#overview",
+    "href": "viz-income-dynamics.html#overview",
+    "title": "Income Inequality Dynamics",
+    "section": "",
+    "text": "This visualization captures the temporal dynamics of income inequality, illustrating how income distributions have shifted and evolved. The analysis tracks key inequality metrics such as Gini coefficients and income quintile ratios across time."
+  },
+  {
+    "objectID": "viz-income-dynamics.html#visualization",
+    "href": "viz-income-dynamics.html#visualization",
+    "title": "Income Inequality Dynamics",
+    "section": "Visualization",
+    "text": "Visualization\n\n\n\n\nIncome Inequality Dynamics"
+  },
+  {
+    "objectID": "viz-income-dynamics.html#methodology",
+    "href": "viz-income-dynamics.html#methodology",
+    "title": "Income Inequality Dynamics",
+    "section": "Methodology",
+    "text": "Methodology\n\nData Sources\n\nNational statistical offices - Household income surveys\nEU-SILC longitudinal data - Panel data for tracking changes\n\n\n\nTechnical Approach\n\n\nCode\n# Key packages used\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(scales)\n\n# Time series analysis of inequality metrics\n# Gini coefficient calculations\n# Quintile ratio analysis (S80/S20)\n\n# Visualization techniques:\n# - Line plots for temporal trends\n# - Area charts for distribution shifts\n# - Annotations for key policy events\n\n\n\n\nKey Features\n\nLongitudinal perspective on inequality trends\nMultiple metrics for comprehensive analysis\nContext-aware annotations for interpretation"
+  },
+  {
+    "objectID": "viz-income-dynamics.html#skills-demonstrated",
+    "href": "viz-income-dynamics.html#skills-demonstrated",
+    "title": "Income Inequality Dynamics",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nSkill\nApplication\n\n\n\n\nTime series analysis\nTrend identification\n\n\nStatistical measures\nGini, quintile ratios\n\n\nVisual storytelling\nAnnotated graphics\n\n\nData transformation\nLong-format reshaping\n\n\n\n\n← Previous: Euro Area Inequality Next: Education Mobility →"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am a quantitative researcher with expertise in data visualization, statistical analysis, and interactive dashboard development. My work focuses on economic and social policy research, with particular interest in:\n\nIncome and wealth inequality analysis\nMigration and integration statistics\nEducational mobility research\nRegional/spatial economics"
+  },
+  {
+    "objectID": "about.html#profile",
+    "href": "about.html#profile",
+    "title": "About",
+    "section": "",
+    "text": "I am a quantitative researcher with expertise in data visualization, statistical analysis, and interactive dashboard development. My work focuses on economic and social policy research, with particular interest in:\n\nIncome and wealth inequality analysis\nMigration and integration statistics\nEducational mobility research\nRegional/spatial economics"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming Languages\n\n\nR ★★★★★\nPrimary language for statistical analysis and visualization\n\n\nSQL ★★★★☆\nDatabase querying and data management\n\n\nPython ★★★☆☆\nData processing and automation\n\n\n\n\nData Visualization\n\n\n\nTool\nProficiency\nUse Cases\n\n\n\n\nggplot2\nExpert\nPublication-quality graphics\n\n\nplotly\nAdvanced\nInteractive charts\n\n\nShiny\nAdvanced\nWeb applications\n\n\nflexdashboard\nAdvanced\nAnalytical dashboards\n\n\nleaflet\nIntermediate\nInteractive maps\n\n\n\n\n\nData Wrangling & Analysis\n\ntidyverse ecosystem: dplyr, tidyr, purrr, stringr\nSpatial analysis: sf, giscoR, rnaturalearth\nData formats: Arrow/Parquet, Excel, CSV, JSON\nAPIs: Eurostat, OECD.Stat, World Bank\n\n\n\nReporting & Documentation\n\nQuarto - Modern scientific publishing\nR Markdown - Reproducible reports\nLaTeX - Academic documents"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n[Add your educational background here]"
+  },
+  {
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "About",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n[Add your work experience here]"
+  },
+  {
+    "objectID": "about.html#publications-projects",
+    "href": "about.html#publications-projects",
+    "title": "About",
+    "section": "Publications & Projects",
+    "text": "Publications & Projects\n[Add relevant publications or projects]"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\nI’m always interested in discussing new opportunities, collaborations, or just connecting with fellow data enthusiasts.\n\n\n📧 Email\nyour.email@example.com\n\n\n💼 LinkedIn\nlinkedin.com/in/yourusername\n\n\n🐙 GitHub\ngithub.com/yourusername"
+  },
+  {
+    "objectID": "about.html#this-portfolio",
+    "href": "about.html#this-portfolio",
+    "title": "About",
+    "section": "This Portfolio",
+    "text": "This Portfolio\nThis portfolio website was built using:\n\nQuarto - Open-source scientific and technical publishing\nGitHub Pages - Free static site hosting\nCustom CSS - Tailored styling for professional presentation\n\nThe source code for this portfolio is available on GitHub.\n\n← Back to Portfolio"
+  }
+]

@@ -1,0 +1,202 @@
+---
+title: "OECD Education Attainment Dashboard"
+subtitle: "Comparing educational outcomes between native and foreign-born populations"
+---
+
+## 🚀 Live Dashboard
+
+::: {.callout-tip}
+## Try it now!
+**[Open Full Dashboard →](https://teonikolov38.shinyapps.io/oecd-education/){target="_blank"}**
+:::
+
+### Embedded Preview
+
+<iframe src="https://teonikolov38.shinyapps.io/oecd-education/" 
+        style="width: 100%; height: 700px; border: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+</iframe>
+
+---
+
+## Overview
+
+This interactive flexdashboard provides a comparative analysis of educational attainment levels between native-born and foreign-born populations across OECD member countries (plus Bulgaria and Romania). The dashboard enables exploration of education-migration intersections through interactive visualizations.
+
+## Dashboard Features
+
+### 📊 Stacked Bar Chart
+
+- Compare native-born vs. foreign-born populations
+- Educational levels: Below upper secondary, Upper secondary, Tertiary
+- Country-specific analysis with aggregation over selected years
+
+### 🌍 Interactive World Map
+
+- Choropleth visualization of OECD + EU countries
+- Filter by birth place (native/foreign-born)
+- Filter by education level
+- Natural Earth projection for global context
+
+### ⚙️ Interactive Controls
+
+| Control | Description |
+|---------|-------------|
+| Country | Select country for bar chart comparison |
+| Birth place | Native-born or Foreign-born filter for map |
+| Education level | Filter map by educational attainment |
+| Year range | Slider for temporal aggregation |
+
+## Technical Implementation
+
+```{r}
+#| eval: false
+#| code-fold: show
+
+# Core libraries
+library(flexdashboard)
+library(shiny)
+library(dplyr)
+library(plotly)
+library(arrow)
+
+# Data loaded from Parquet format (efficient columnar storage)
+educ <- arrow::read_parquet("OECD_EducAtt.parquet")
+
+# Interactive bar chart with plotly
+plot_ly(
+  data  = df_top,
+  x     = ~BirthPlace,
+  y     = ~Value,
+  color = ~EducLevel,
+  type  = "bar"
+) %>%
+  layout(barmode = "stack")
+
+# Interactive choropleth map
+plot_ly(
+  df_map,
+  type = "choropleth",
+  locations = ~CountryCode,
+  z = ~Value,
+  locationmode = "ISO-3"
+) %>%
+  layout(
+    geo = list(
+      projection = list(type = "natural earth")
+    )
+  )
+```
+
+## Data Sources
+
+- **OECD Education at a Glance** - Educational attainment statistics
+- **OECD.Stat** - Migration and education cross-tabulations
+- Data stored in **Apache Parquet** format for efficient loading
+
+## Countries Covered
+
+The dashboard includes all 38 OECD member countries plus Bulgaria and Romania:
+
+::: {.columns}
+::: {.column width="33%"}
+- Australia
+- Austria
+- Belgium
+- Canada
+- Chile
+- Colombia
+- Costa Rica
+- Czech Republic
+- Denmark
+- Estonia
+- Finland
+- France
+- Germany
+- Greece
+:::
+
+::: {.column width="33%"}
+- Hungary
+- Iceland
+- Ireland
+- Israel
+- Italy
+- Japan
+- Korea
+- Latvia
+- Lithuania
+- Luxembourg
+- Mexico
+- Netherlands
+- New Zealand
+:::
+
+::: {.column width="33%"}
+- Norway
+- Poland
+- Portugal
+- Slovakia
+- Slovenia
+- Spain
+- Sweden
+- Switzerland
+- Turkey
+- United Kingdom
+- United States
+- Bulgaria
+- Romania
+:::
+:::
+
+## Key Insights Enabled
+
+The dashboard facilitates analysis of:
+
+1. **Integration outcomes** - How do foreign-born populations compare in educational attainment?
+2. **Country differences** - Which countries show largest gaps between native and foreign-born?
+3. **Temporal trends** - How have patterns changed over time?
+4. **Education levels** - At which levels are gaps most pronounced?
+
+## Deployment Options
+
+### Option 1: ShinyApps.io
+
+```r
+# Flexdashboard with runtime: shiny requires Shiny server
+rsconnect::deployApp("NIKOLOV_GlobalMacroMonitor_OECD.Rmd")
+```
+
+### Option 2: Posit Connect / Shiny Server
+
+For organizational deployment with enhanced features.
+
+### Option 3: Run Locally
+
+```r
+rmarkdown::run("NIKOLOV_GlobalMacroMonitor_OECD.Rmd")
+```
+
+## Skills Demonstrated
+
+| Category | Skills |
+|----------|--------|
+| **Dashboard** | flexdashboard, Shiny runtime |
+| **Visualization** | plotly, interactive charts, choropleths |
+| **Data Format** | Apache Arrow/Parquet |
+| **OECD Data** | International statistics, ISO-3 codes |
+| **Interactivity** | Reactive inputs, linked views |
+
+## Data Pipeline
+
+```{mermaid}
+flowchart LR
+    A[OECD.Stat API] --> B[R Data Cleaning]
+    B --> C[Parquet Storage]
+    C --> D[Flexdashboard]
+    D --> E[Interactive Viz]
+```
+
+---
+
+[← Previous: Migration Austria](app-migration-austria.qmd){.cta-button .secondary}
+[Back to Portfolio →](index.qmd){.cta-button}
