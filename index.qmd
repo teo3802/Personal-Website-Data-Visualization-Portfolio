@@ -3,7 +3,7 @@ title: "Data Visualization Portfolio"
 ---
 
 ::: {.hero-section}
-# Teodor Nikolaev Nikolov
+# Teodor Nikolov
 
 **Data Visualization & Quantitative Analysis Portfolio**
 
