@@ -8,7 +8,7 @@ title: "Data Visualization Portfolio"
 **Data Visualization & Quantitative Analysis Portfolio**
 
 Showcasing expertise in statistical analysis, interactive dashboards, and data storytelling using R, Shiny, and modern visualization tools.
-The visualizations and dashboards presented here highlight skills in transforming complex datasets into clear, insightful graphics for economic and social research, which were created within the framework of my courses in the MSc in Economics degree programat the Vienna University of Economics and Business (WU).
+The visualizations and dashboards presented here highlight skills in transforming complex datasets into clear, insightful graphics for economic and social research, which were created within the framework of my courses in the MSc in Economics degree program at the Vienna University of Economics and Business (WU).
 :::
 
 ## Featured Skills {.section-header}
