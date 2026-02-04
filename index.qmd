@@ -178,5 +178,5 @@ Flexdashboard comparing educational attainment levels between native-born and fo
 Interested in collaborating or discussing opportunities?
 
 [📧 Email Me](mailto:your.email@example.com){.cta-button}
-[💼 LinkedIn](https://linkedin.com/in/yourusername){.cta-button .secondary}
-[🐙 GitHub](https://github.com/yourusername){.cta-button .secondary}
+[💼 LinkedIn](https://linkedin.com/in/teodor-nikolov-273nq){.cta-button .secondary}
+[🐙 GitHub](https://github.com/teo3802){.cta-button .secondary}

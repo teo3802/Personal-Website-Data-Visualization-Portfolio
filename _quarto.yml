@@ -32,9 +32,9 @@ website:
         href: about.qmd
     right:
       - icon: github
-        href: https://github.com/yourusername
+        href: https://github.com/teo3802
       - icon: linkedin
-        href: https://linkedin.com/in/yourusername
+        href: https://linkedin.com/in/teodor-nikolov-273nq
 
   page-footer:
     center: "© 2026 Teodor Nikolaev Nikolov | Built with Quarto"
