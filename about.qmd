@@ -5,7 +5,9 @@ subtitle: "Teodor Nikolaev Nikolov"
 
 ## Profile
 
-I am a quantitative researcher with expertise in data visualization, statistical analysis, and interactive dashboard development. My work focuses on economic and social policy research, with particular interest in:
+I am a second-year MSc Economics student and Research Assistant at the Institute for Economic and Social History at the Vienna University of Economics and Business (WU). I have a strong passion for data visualization, statistical analysis, and economic research. My academic background in economics, combined with hands-on experience in data science and visualization tools, enables me to transform complex datasets into clear, insightful graphics that facilitate understanding and decision-making.
+
+My research interests include:
 
 - **Income and wealth inequality** analysis
 - **Migration and integration** statistics
@@ -81,7 +83,7 @@ I'm always interested in discussing new opportunities, collaborations, or just c
 ::: {.grid}
 ::: {.g-col-4}
 ### 📧 Email
-[your.email@example.com](mailto:your.email@example.com)
+[teodor.nikolov@s.wu.ac.at](mailto:teodor.nikolov@s.wu.ac.at)
 :::
 
 ::: {.g-col-4}
